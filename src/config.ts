@@ -8,16 +8,16 @@ import type {
 import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
-	title: "Fanzhuo's Blog Featured",
+	title: "飞屋工作室官网",
 	subtitle: "(*^▽^*)",
-	lang: "en", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
+	lang: "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	themeColor: {
 		hue: 195, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
 		fixed: false, // Hide the theme color picker for visitors
 	},
 	banner: {
 		enable: true,
-		src: "assets/images/demo-banner.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+		src: "assets/images/background.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 		position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
 		credit: {
 			enable: false, // Display the credit text of the banner image
@@ -32,7 +32,7 @@ export const siteConfig: SiteConfig = {
 	favicon: [
 		// Leave this array empty to use the default favicon
 		{
-		   src: 'https://blog.fanzhuo.xyz/favicon.ico',    // Path of the favicon, relative to the /public directory
+		   src: '/src/assets/images/favicon.ico',    // Path of the favicon, relative to the /public directory
 		//   theme: 'light',              // (Optional) Either 'light' or 'dark', set only if you have different favicons for light and dark mode
 		   sizes: '48x48',              // (Optional) Size of the favicon, set only if you have favicons of different sizes
 		}
@@ -45,39 +45,44 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		LinkPreset.About,
 		{
-			name: "Blog",
-			url: "https://blog.fanzhuo.xyz/", // Internal links should not include the base path, as it is automatically added
-			external: true, // Show an external link icon and will open in a new tab
+			name: "成员",       // 导航栏上显示的文字
+			url: "/members/",   // 对应的URL路径
+			external: false,    // 设置为false，表示是站内链接
 		},
+		// {
+		// 	name: "Fanzhuo",
+		// 	url: "https://fanzhuo.xyz/", // Internal links should not include the base path, as it is automatically added
+		// 	external: true, // Show an external link icon and will open in a new tab
+		// },
 	],
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/demo-avatar.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-	name: "Fanzhuo",
-	bio: "My Development Logs, Life Essays, and Algorithm Discussions.",
+	avatar: "assets/images/avatar.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+	name: "飞屋工作室",
+	bio: "欢迎来到飞屋工作室官方网站！",
 	links: [
-		{
-			name: "Support me",
-			icon: "material-symbols:favorite-outline", // Visit https://icones.js.org/ for icon codes
-			// You will need to install the corresponding icon set if it's not already included
-			// `pnpm add @iconify-json/<icon-set-name>`
-			url: "https://afdian.com/a/fanzhuo",
-		},
+		// {
+		// 	name: "Support me",
+		// 	icon: "material-symbols:favorite-outline", // Visit https://icones.js.org/ for icon codes
+		// 	// You will need to install the corresponding icon set if it's not already included
+		// 	// `pnpm add @iconify-json/<icon-set-name>`
+		// 	url: "https://afdian.com/a/fanzhuo",
+		// },
 		{
 			name: "BiliBili",
 			icon: "fa6-brands:bilibili",
-			url: "https://store.steampowered.com",
+			url: "https://space.bilibili.com/3546771676466025",
 		},
-		{
-			name: "GitHub",
-			icon: "fa6-brands:github",
-			url: "https://github.com/fanzhuoAWA",
-		},
+		// {
+		// 	name: "GitHub",
+		// 	icon: "fa6-brands:github",
+		// 	url: "https://github.com/fanzhuoAWA",
+		// },
 		{
 			name: "QQ",
 			icon: "fa6-brands:qq",
-			url: "https://qm.qq.com/q/OIIUabbTOK",
+			url: "https://qm.qq.com/q/w76yQEysQa",
 		},
 	],
 };

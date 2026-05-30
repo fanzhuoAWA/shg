@@ -1,2 +1,7 @@
-# About  
-This site is a curated version of [Fanzhuo's Blog](https://blog.fanzhuo.xyz/). I've selected some articles that I believe are well-written and placed them here. If you'd like to access more posts, please click the `Blog` button in the top navigation bar (〃＾▽＾〃).
+# 关于
+
+欢迎来到飞屋工作室官方网站！
+				
+我们是互联网上的一个艺术群体，主要涉猎于绘画和迷因视频制作！
+
+该网站还在搭建中，如果有建议可以在QQ群中找 [Fanzhuo](https://fanzhuo.xyz/) 。
