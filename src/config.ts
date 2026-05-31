@@ -54,6 +54,11 @@ export const navBarConfig: NavBarConfig = {
   			url: "javascript:void(0)",
   			external: false,
 		},
+		{
+  			name: "飞屋之域 Wiki",
+  			url: "https://skyworldhouse.fandom.com/zh/wiki/%E9%A3%9E%E5%B1%8B%E4%B9%8B%E5%9F%9F_Wiki",
+  			external: true,
+		},
 		// {
 		// 	name: "Fanzhuo",
 		// 	url: "https://fanzhuo.xyz/", // Internal links should not include the base path, as it is automatically added
@@ -88,6 +93,11 @@ export const profileConfig: ProfileConfig = {
 			name: "QQ",
 			icon: "fa6-brands:qq",
 			url: "https://qm.qq.com/q/pdR5SRA9DU",
+		},
+		{
+			name: "小红书",
+			icon: "simple-icons:xiaohongshu",
+			url: "https://www.xiaohongshu.com/user/profile/665ec2e4000000000b033674?xsec_token=YBB5hYFwDFnsSP-UsJa7Kg-kqUE0LGpTVtz8D2oF-TsBQ%3D&xsec_source=app_share&xhsshare=CopyLink&appuid=68588b99000000001b0182fb&apptime=1750633814&share_id=44b4dc48f2944869bb4bfb84f9d2c23e&share_channel=copy_link",
 		},
 	],
 };
