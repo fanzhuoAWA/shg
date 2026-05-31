@@ -19,6 +19,7 @@ let links: NavBarLink[] = navBarConfig.links.map(
 		return item;
 	},
 );
+
 ---
 <div id="navbar" class="z-50 onload-animation">
     <div class="absolute h-8 left-0 right-0 -top-8 bg-[var(--card-bg)] transition"></div> <!-- used for onload animation -->
@@ -33,6 +34,16 @@ let links: NavBarLink[] = navBarConfig.links.map(
         </a>
         <div class="hidden md:flex">
             {links.map((l) => {
+                if (l.name === "树洞") {
+                     return <button
+                        class="btn-plain scale-animation rounded-lg h-11 font-bold px-5 active:scale-95"
+                        onclick="window.showWhisper()"
+                    >
+                        <div class="flex items-center">
+                            {l.name}
+                        </div>
+                    </button>;
+                }
                 return <a aria-label={l.name} href={l.external ? l.url : url(l.url)} target={l.external ? "_blank" : null}
                           class="btn-plain scale-animation rounded-lg h-11 font-bold px-5 active:scale-95"
                 >
@@ -62,6 +73,22 @@ let links: NavBarLink[] = navBarConfig.links.map(
 </div>
 
 <script>
+
+let whispers = [];
+
+fetch('/whispers.json')
+    .then(res => res.json())
+    .then(data => {
+        whispers = data;
+    });
+
+function showWhisper() {
+    const randomIndex = Math.floor(Math.random() * whispers.length);
+    const whisper = whispers[randomIndex];
+    alert(whisper);
+}
+window.showWhisper = showWhisper;
+
 function switchTheme() {
     if (localStorage.theme === 'dark') {
         document.documentElement.classList.remove('dark');
@@ -102,6 +129,7 @@ function loadButtonScript() {
 }
 
 loadButtonScript();
+
 </script>
 
 {import.meta.env.PROD && <script is:inline define:vars={{scriptUrl: url('/pagefind/pagefind.js')}}>

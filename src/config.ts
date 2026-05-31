@@ -49,6 +49,11 @@ export const navBarConfig: NavBarConfig = {
 			url: "/members/",   // 对应的URL路径
 			external: false,    // 设置为false，表示是站内链接
 		},
+		{
+  			name: "树洞",
+  			url: "javascript:void(0)",
+  			external: false,
+		},
 		// {
 		// 	name: "Fanzhuo",
 		// 	url: "https://fanzhuo.xyz/", // Internal links should not include the base path, as it is automatically added
