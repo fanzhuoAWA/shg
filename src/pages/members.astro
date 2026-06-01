@@ -4,8 +4,8 @@ import Markdown from "@components/misc/Markdown.astro";
 import I18nKey from "../i18n/i18nKey";
 import { i18n } from "../i18n/translation";
 import MainGridLayout from "../layouts/MainGridLayout.astro";
+import FriendCard from "../components/FriendCard.astro";
 
-// 读取 spec 集合中的 members 条目
 const membersPost = await getEntry("spec", "members");
 
 if (!membersPost) {
@@ -15,11 +15,45 @@ if (!membersPost) {
 const { Content } = await render(membersPost);
 ---
 <MainGridLayout title={i18n(I18nKey.members)} description={i18n(I18nKey.members)}>
+    <!-- 显示 members.md 中的介绍文字 -->
     <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
         <div class="card-base z-10 px-9 py-6 relative w-full ">
             <Markdown class="mt-2">
                 <Content />
             </Markdown>
         </div>
+    </div>
+    
+    <!-- 成员卡片网格 -->
+    <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 section-title" style="color: var(--primary); margin-top: 2rem;">
+        <span>核心成员</span>
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <FriendCard
+            name="冰糖教主"
+            avatar="https://image.fanzhuo.xyz/file/AgACAgUAAyEGAASKws10AAOqah2XOV59ieoNhXNLxf874PZ2GqoAAi0VaxsNVulUddIRh9Q4T_UBAAMCAAN4AAM7BA.png"
+            description="飞屋创始人"
+            url="https://space.bilibili.com/397168660?spm_id_from=333.337.0.0"
+            type="contributor"
+        />
+        <FriendCard
+            name="桉铭_cat"
+            avatar="https://s21.ax1x.com/2025/09/06/pV28rXd.jpg"
+            description=" "
+            url="https://b23.tv/krJUeAs"
+            type="contributor"
+        />
+    </div>
+    <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 section-title" style="color: var(--primary); margin-top: 2rem;">
+        <span>正式成员</span>
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <FriendCard
+            name="饭桌Fanzhuo"
+            avatar="https://fanzhuo.xyz/profile.png"
+            description="飞屋官网站长"
+            url="https://fanzhuo.xyz/"
+            type="contributor"
+        />
     </div>
 </MainGridLayout>
