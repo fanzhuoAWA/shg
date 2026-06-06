@@ -23,7 +23,9 @@ const { Content } = await render(membersPost);
             </Markdown>
         </div>
     </div>
-    
+    <br>
+    你是飞屋成员但是不在此页面中？ <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="mailto:fan_zhuo@outlook.com?body=%3CFriendCard%0A%20%20%20%20name%3D%22%22%20%3C%21--%20%E5%A7%93%E5%90%8D%20--%3E%0A%20%20%20%20avatar%3D%22%22%20%3C%21--%20%E5%A4%B4%E5%83%8F%EF%BC%88%E8%AF%B7%E8%87%AA%E8%A1%8C%E6%89%BE%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%EF%BC%89%20--%3E%0A%20%20%20%20description%3D%22%20%22%20%3C%21--%20%E7%AE%80%E4%BB%8B%20--%3E%0A%20%20%20%20url%3D%22%22%20%3C%21--%20%E4%B8%BB%E9%A1%B5%E9%93%BE%E6%8E%A5%20--%3E%0A%20%20%20%20type%3D%22contributor%22%0A/%3E">请点击此处发送邮件</a>
+    <br>
     <!-- 成员卡片网格 -->
     <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 section-title" style="color: var(--primary); margin-top: 2rem;">
         <span>核心成员</span>
@@ -306,6 +308,16 @@ const { Content } = await render(membersPost);
             type="contributor"
         />
     </div>
-    <br>
-    你是飞屋成员但是不在此列表中？ <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="mailto:fan_zhuo@outlook.com?body=%3CFriendCard%0A%20%20%20%20name%3D%22%22%20%3C%21--%20%E5%A7%93%E5%90%8D%20--%3E%0A%20%20%20%20avatar%3D%22%22%20%3C%21--%20%E5%A4%B4%E5%83%8F%EF%BC%88%E8%AF%B7%E8%87%AA%E8%A1%8C%E6%89%BE%E5%9B%BE%E5%BA%8A%E4%B8%8A%E4%BC%A0%EF%BC%89%20--%3E%0A%20%20%20%20description%3D%22%20%22%20%3C%21--%20%E7%AE%80%E4%BB%8B%20--%3E%0A%20%20%20%20url%3D%22%22%20%3C%21--%20%E4%B8%BB%E9%A1%B5%E9%93%BE%E6%8E%A5%20--%3E%0A%20%20%20%20type%3D%22contributor%22%0A/%3E">请点击此处发送邮件</a>
+    <h2 class="text-2xl font-bold mb-6 flex items-center gap-2 section-title" style="color: var(--primary); margin-top: 2rem;">
+        <span>初步成员</span>
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <FriendCard
+            name="沁狐小狐狸"
+            avatar="https://image.fanzhuo.xyz/file/AgACAgUAAyEGAASKws10AAPTaiQmNxoFMl_Ye38in4vZ_b9p95AAApoPaxsjBClV76PTGfVWP9QBAAMCAAN5AAM7BA.png"
+            description=" "
+            url="https://b23.tv/rZduwo3"
+            type="contributor"
+        />
+    </div>
 </MainGridLayout>
